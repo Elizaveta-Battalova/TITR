@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: url("./background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    background: linear-gradient(#000000, #ffffff);
+    min-height: 15vh;
+    width: 100%;
+}
+
+.title img {
+    width: 200px;
+}
+
+.nav {
+    min-height: 15vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ham-menu {
+    display: none;
+}
+
+.drop-menu {
+    display: none;
+}
+
+.ham-menu div {
+    height: 5px;
+    width: 30px;
+    margin: 5px 0;
+    background-color: black;
+    transition: 1s ease;
+}
+
+.ham-menu .top {
+    transform: rotateZ(410deg) translate(-5%, 100%);
+    margin: 0;
+    transition: 1s ease;
+}
+
+.ham-menu .bottom {
+    transform: rotateZ(-410deg) translate(-5%, -100%);
+    margin: 0;
+    transition: 1s ease;
+}
+
+.ham-menu .mid {
+    transform: rotateZ(360deg);
+    display: none;
+    transition: 1s ease;
+}
+
+.title {
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    margin: 0 10px;
+}
+
+a {
+    color: white
+}
+
+a:hover {
+    color: black;
+}
+
+main {
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 8%;
+}
+
+footer {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#ffffff, #000000);
+    height: 10vh;
+    width: 100%;
+}
+
+.footer {
+    height: 10vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 992px) {
+    .nav {
+        height: inherit;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .img_block .content_block {
+        height: auto;
+        margin-bottom: 50px;
+    }
+    .title img {
+        width: 150px;
+    }
+    main {
+        flex-direction: column;
+    }
+    img {
+        width: 300px;
+    }
+    .img_block {
+        width: 300px;
+    }
+    .title {
+        letter-spacing: 2px;
+        word-spacing: 2px;
+    }
+    ul {
+        display: flex;
+    }
+    li {
+        margin: 0 8px;
+    }
+    a {
+        color: white
+    }
+    a:hover {
+        color: black;
+    }
+}
+
+@media (max-width:768px) {
+    header {
+        z-index: 999;
+        min-height: 20vh;
+    }
+    .nav {
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    main {
+        margin-top: -150px;
+    }
+    ul {
+        display: none;
+    }
+    .ham-menu {
+        display: block;
+    }
+    .drop-menu {
+        position: relative;
+        z-index: -1;
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        transition: 1s cubic-bezier(0.9, -0.14, 0, 1.15);
+        transform: translateY(-100%);
+        list-style-position: inside;
+    }
+    .drop-down {
+        transform: translateY(0%);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+        z-index: 9;
+    }
+    .drop-menu div {
+        width: 100%;
+        background-color: #9e9e9e;
+        text-align: right;
+        padding: 10px 20px;
+        transition: 0.5s ease;
+        border: none;
+        letter-spacing: 2px;
+    }
+    .drop-menu div a {
+        color: #ffffff;
+        transition: 0.5s ease;
+    }
+}
+
+@media (max-width:450px) {
+    body {
+        background-size: auto;
+    }
+    .nav {
+        width: 90%
+    }
+    .ham-menu div {
+        height: 4px;
+        width: 23px;
+        background-color: black;
+        margin: 3px 0;
+    }
+    .title {
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        font-size: 0.8em;
+    }
+}
